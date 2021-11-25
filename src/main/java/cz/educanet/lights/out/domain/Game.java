@@ -7,7 +7,6 @@ import java.util.Random;
 public class Game implements ILightsOut {
     private static final int SIZE = 5;
     private int moves;
-    private int turnedOn;
     private boolean[][] grid = new boolean[SIZE][SIZE];
 
 
@@ -18,7 +17,8 @@ public class Game implements ILightsOut {
 
     @Override
     public boolean isGameOver() {
-
+        int turnedOn = 1;
+        
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
                 if (!grid[i][j]) {
