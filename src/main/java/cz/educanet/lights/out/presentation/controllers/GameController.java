@@ -28,11 +28,8 @@ public class GameController {
     @FXML
     public void initialize() {
         game = new Game();
-        if(game.isGameOver()){
-            return;
-        } else {
-            game = new Game();
-        }
+        game.randomize();
+
         // TODO: Change here with your own impl
 
         if (game != null) {
